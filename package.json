@@ -1,0 +1,43 @@
+{
+  "name": "zsh",
+  "displayName": "zsh",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "zsh.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "zsh.run",
+        "title": "Run"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.99.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "electron": "^35.1.5",
+    "eslint": "^9.23.0"
+  },
+  "dependencies": {
+    "@electron/fiddle-core": "^1.4.0"
+  }
+}
