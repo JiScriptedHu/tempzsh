@@ -1,5 +1,6 @@
 const vscode = require('vscode');
-const run = require('./lib/run');
+const run = require('./lib/runAsAPI');
+const runcli = require('./lib/runInCLI')
 
  /**
  * @param {vscode.ExtensionContext} context
@@ -21,6 +22,13 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(test);
+
+	const test2 = vscode.commands.registerCommand('zsh.runcli', function () {
+
+		runcli.runInCLI();
+	});
+
+	context.subscriptions.push(test2);
 }
 
 function deactivate() {}

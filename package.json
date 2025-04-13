@@ -20,6 +20,10 @@
       {
         "command": "zsh.run",
         "title": "Run"
+      },
+      {
+        "command": "zsh.runcli",
+        "title": "Run CLi"
       }
     ]
   },
